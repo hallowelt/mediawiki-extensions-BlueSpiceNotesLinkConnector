@@ -1,0 +1,33 @@
+{
+	"name": "BlueSpiceNotesLinkConnector",
+	"version": "3.0.0-beta",
+	"url": "https://help.bluespice.com/index.php/BlueSpiceNotesLinkConnector",
+	"author": "Patric Wirth",
+	"descriptionmsg": "bs-noteslinkconnector-desc",
+	"type": "bluespice",
+	"license": "GPL-3.0-only",
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceNotesLinkConnector": {
+					"className": "\\BlueSpice\\NotesLinkConnector\\Extension",
+					"extPath": "/BlueSpiceNotesLinkConnector",
+					"status": "beta",
+					"package": "BlueSpiceNotesLinkConnector"
+				}
+			}
+		}
+	},
+	"MessagesDirs": {
+		"BlueSpiceNotesLinkConnector": [
+			"i18n"
+		]
+	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\NotesLinkConnector\\": "src/"
+	},
+	"Hooks": {
+		"BSInsertMagicAjaxGetData": "\\BlueSpice\\NotesLinkConnector\\Hook\\BSInsertMagicAjaxGetData\\AddNDLTag::callback"
+	},
+	"manifest_version": 2
+}
