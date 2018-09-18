@@ -27,6 +27,45 @@
  * @filesource
  */
 
-namespace BlueSpice\NotesLinkConnector;
 
-class Extension extends \BlueSpice\Extension {}
+class BlueSpiceNotesLinkConnector extends \BsExtensionMW {
+
+	public static function onBSInsertMagicAjaxGetData( &$response, $type ) {
+		if( $type !== 'tags' ) {
+			return true;
+		}
+		$helplink = '';
+		$extensions = \ExtensionRegistry::getInstance()->getAllThings();
+		if( isset( $extensions['NotesLink'] ) ) {
+			$helplink = $extensions['NotesLink']['url'];
+		}
+
+		$response->result[] = (object) [
+			'id' => 'ndl',
+			'type' => 'tag',
+			'name' => 'NDL',
+			'desc' => \Message::newFromkey(
+				'bs-noteslinkconnector-tag-ndl-description'
+			)->plain(),
+			'code' => "<NDL>
+    <REPLICA >
+    <VIEW >
+    <NOTE >
+    <HINT></HINT>
+    <REM></REM>
+</NDL>",
+			'helplink' => $helplink,
+			'examples' => [
+				[ 'code' => '<NDL>
+    <REPLICA 852565A7:005100C7>
+    <VIEW OFAAC7D56C:A8FC874B-ON852563BE:00619639>
+    <NOTE ON852563BE:A8FC874B-OFAAC7D56C:00619639>
+    <HINT>CN=MYHOST/O=IDC</HINT>
+    <REM>sampleDB</REM>
+</NDL>'
+			]],
+		];
+
+		return true;
+	}
+}
