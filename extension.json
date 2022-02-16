@@ -16,6 +16,11 @@
 					"package": "BlueSpiceNotesLinkConnector"
 				}
 			}
+		},
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.bluespice.noteslinkconnector.visualEditor"
+			]
 		}
 	},
 	"MessagesDirs": {
@@ -26,8 +31,26 @@
 	"AutoloadNamespaces": {
 		"BlueSpice\\NotesLinkConnector\\": "src/"
 	},
+	"ResourceModules": {
+		"ext.bluespice.noteslinkconnector.visualEditor": {
+			"scripts": [
+				"ve/ve.ce.NdlNode.js",
+				"ve/ve.dm.NdlNode.js",
+				"ve/ve.ui.NdlInspector.js",
+				"ve/ve.ui.NdlInspectorTool.js"
+			],
+			"messages": [
+				"bs-noteslinkconnector-ve-ndl-title",
+				"bs-noteslinkconnector-ve-ndlinspector-title"
+			]
+		}
+	},
 	"Hooks": {
 		"BSInsertMagicAjaxGetData": "\\BlueSpice\\NotesLinkConnector\\Hook\\BSInsertMagicAjaxGetData\\AddNDLTag::callback"
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceNotesLinkConnector/resources"
 	},
 	"manifest_version": 2
 }

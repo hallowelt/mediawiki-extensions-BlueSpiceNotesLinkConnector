@@ -4,5 +4,8 @@
 			"Patric Wirth <wirth@hallowelt.com>"
 		]
 	},
-	"bs-noteslinkconnector-desc": "Description of BlueSpiceNotesLinkConnector extension."
+	"bs-noteslinkconnector-desc": "Description of BlueSpiceNotesLinkConnector extension.",
+	"bs-noteslinkconnector-ve-ndl-title": "Title for magic word window",
+	"bs-noteslinkconnector-tag-ndl-description": "Description of NDL magic word",
+	"bs-noteslinkconnector-ve-ndlinspector-title": "Title for NDL inspector window"
 }

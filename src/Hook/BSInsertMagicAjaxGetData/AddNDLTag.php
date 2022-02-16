@@ -13,6 +13,7 @@ class AddNDLTag extends \BlueSpice\InsertMagic\Hook\BSInsertMagicAjaxGetData {
 			'id' => 'ndl',
 			'type' => 'tag',
 			'name' => 'NDL',
+			'mwvecommand' => 'ndlCommand',
 			'desc' => \Message::newFromkey( 'bs-noteslinkconnector-tag-ndl-description' )->plain(),
 			'code' => $this->getCode(),
 			'helplink' => $this->getHelpLink(),

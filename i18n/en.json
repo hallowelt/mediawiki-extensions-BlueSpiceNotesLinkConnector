@@ -4,5 +4,8 @@
 			"Patric Wirth <wirth@hallowelt.com>"
 		]
 	},
-	"bs-noteslinkconnector-desc": "Connects NotesLink with BlueSice"
+	"bs-noteslinkconnector-desc": "Connects NotesLink with BlueSice",
+	"bs-noteslinkconnector-ve-ndl-title": "NDL tag",
+	"bs-noteslinkconnector-tag-ndl-description": "Adds the <NDL></NDL> tag, that enables rendering \"Notes Data Link\" (NDL) code as a web accessible link",
+	"bs-noteslinkconnector-ve-ndlinspector-title": "Insert NDL tag"
 }
