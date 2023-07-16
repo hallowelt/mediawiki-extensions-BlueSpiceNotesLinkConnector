@@ -17,10 +17,12 @@
 				}
 			}
 		},
-		"VisualEditor": {
-			"PluginModules": [
-				"ext.bluespice.noteslinkconnector.visualEditor"
-			]
+		"ContentDroplets": {
+			"Droplets": {
+				"notes-data-link": {
+					"class": "BlueSpice\\NotesLinkConnector\\ContentDroplets\\NotesDataLinkDroplet"
+				}
+			}
 		}
 	},
 	"MessagesDirs": {
@@ -39,14 +41,14 @@
 				"ve/ve.ui.NdlInspector.js",
 				"ve/ve.ui.NdlInspectorTool.js"
 			],
+			"styles": [
+				"styles/droplet.ndl.css"
+			],
 			"messages": [
 				"bs-noteslinkconnector-ve-ndl-title",
 				"bs-noteslinkconnector-ve-ndlinspector-title"
 			]
 		}
-	},
-	"Hooks": {
-		"BSInsertMagicAjaxGetData": "\\BlueSpice\\NotesLinkConnector\\Hook\\BSInsertMagicAjaxGetData\\AddNDLTag::callback"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
